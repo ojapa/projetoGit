@@ -20,7 +20,7 @@ if [[ $TYPE = "force" ]]; then
 fi
 
 if [[ $TYPE != "force" ]]; then
-    OS_VERSION_PATCH=`sw_vers -productVersion | egrep --color=never -o '10\.[0-9]+\.[0-9]+'`
+    OS_VERSION_PATCH=`sw_vers -productVersion | egrep --color=never -o '10\.[0-9]+'`
     OS_VERSION=`echo $OS_VERSION_PATCH | cut -f 1,2 -d "."`
     OS_SUB=`echo $OS_VERSION_PATCH | cut -f 2 -d "."`
     OS_SUB=`expr $OS_SUB`
