@@ -65,15 +65,15 @@ if [[ $TYPE != "force" ]]; then
 		echo "Detected OS X Lion 10.7. All ok."
 	elif [[ $OS_VERSION == "10.6" ]]; then
 		echo "Detected OS X Snow Leopard 10.6 All ok."
-	else
-		echo "****"
-		echo "Your version of OS X ($OS_VERSION) is not supported, you need at least 10.6"
-		echo "Stopping installation..."
-		echo "If you think that's wrong, try"
-		echo "****"
-		echo "curl -o install.sh -s https://php-osx.liip.ch/install.sh | bash install.sh force"
-		echo "****"
-		exit 2
+	#else
+	#	echo "****"
+	#	echo "Your version of OS X ($OS_VERSION) is not supported, you need at least 10.6"
+	#	echo "Stopping installation..."
+	#	echo "If you think that's wrong, try"
+	#	echo "****"
+	#	echo "curl -o install.sh -s https://php-osx.liip.ch/install.sh | bash install.sh force"
+	#	echo "****"
+	#	exit 2
 	fi
 	if [[ -f /usr/sbin/sysctl ]]; then
 	    SYSCTL="/usr/sbin/sysctl"
